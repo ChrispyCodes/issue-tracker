@@ -9,6 +9,10 @@
     {
       "library": "datatables.net-bs5@1.13.1",
       "destination": "wwwroot/lib/datatables.net-bs5/"
+    },
+    {
+      "library": "toastr.js@2.1.4",
+      "destination": "wwwroot/lib/toastr.js/"
     }
   ]
 }

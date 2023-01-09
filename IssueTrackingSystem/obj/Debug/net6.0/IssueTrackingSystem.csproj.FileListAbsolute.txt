@@ -7,6 +7,8 @@ C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\bin\Debug\net6.0\I
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\bin\Debug\net6.0\IssueTrackingSystem.runtimeconfig.json
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\bin\Debug\net6.0\IssueTrackingSystem.dll
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\bin\Debug\net6.0\IssueTrackingSystem.pdb
+C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\bin\Debug\net6.0\AspNetCoreHero.ToastNotification.Views.dll
+C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\bin\Debug\net6.0\AspNetCoreHero.ToastNotification.dll
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\bin\Debug\net6.0\Humanizer.dll
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\bin\Debug\net6.0\MessagePack.dll
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\bin\Debug\net6.0\MessagePack.Annotations.dll

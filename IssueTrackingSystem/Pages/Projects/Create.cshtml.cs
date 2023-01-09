@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using IssueTrackingSystem.Data;
 using IssueTrackingSystem.Models;
 using Microsoft.AspNetCore.Authorization;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace IssueTrackingSystem.Pages.Projects
 {
@@ -15,10 +11,12 @@ namespace IssueTrackingSystem.Pages.Projects
     public class CreateModel : PageModel
     {
         private readonly ApplicationDbContext _context;
+        private readonly INotyfService _notyf;
 
-        public CreateModel(ApplicationDbContext context)
+        public CreateModel(ApplicationDbContext context, INotyfService notyf)
         {
             _context = context;
+            _notyf = notyf;
         }
 
         public IActionResult OnGet()
@@ -41,6 +39,7 @@ namespace IssueTrackingSystem.Pages.Projects
             _context.Projects.Add(Project);
             await _context.SaveChangesAsync();
 
+            _notyf.Success("Project Created Successfully");
             return RedirectToPage("./Index");
         }
     }

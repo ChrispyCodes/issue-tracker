@@ -126,6 +126,7 @@
     <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script src="~/lib/datatables/dataTables.bootstrap5.min.js"></script>
 
+    @await Component.InvokeAsync("Notyf") 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

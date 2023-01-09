@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using IssueTrackingSystem.Data;
 using IssueTrackingSystem.Models;
 using Microsoft.AspNetCore.Authorization;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace IssueTrackingSystem.Pages.Issues
 {
@@ -15,14 +16,16 @@ namespace IssueTrackingSystem.Pages.Issues
     public class CreateModel : PageModel
     {
         private readonly ApplicationDbContext _context;
-        
+        private readonly INotyfService _notyf;
+
         [BindProperty]
         public string SelectedProject { get; set; }
 
 
-        public CreateModel(ApplicationDbContext context)
+        public CreateModel(ApplicationDbContext context, INotyfService notyf)
         {
             _context = context;
+            _notyf = notyf;
         }
 
         public IActionResult OnGet()
@@ -54,6 +57,7 @@ namespace IssueTrackingSystem.Pages.Issues
             _context.Issues.Add(Issue);
             await _context.SaveChangesAsync();
 
+            _notyf.Success("Issue Created Successfully");
             return RedirectToPage("./Index");
         }
     }
