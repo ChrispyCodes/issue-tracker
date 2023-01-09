@@ -1,0 +1,94 @@
+﻿@page
+@using IssueTrackingSystem.Models
+@model IssueTrackingSystem.Pages.Issues.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create New Issue</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Issue.Title" class="control-label"></label>
+                <input asp-for="Issue.Title" class="form-control" />
+                <span asp-validation-for="Issue.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.Description" class="control-label"></label>
+                <input asp-for="Issue.Description" class="form-control" />
+                <span asp-validation-for="Issue.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.CreatedById" class="control-label"></label>
+                <select asp-for="Issue.CreatedById" class="form-select" asp-items="ViewBag.User">
+                    <option value="">Select User</option>
+                </select>
+                <span asp-validation-for="Issue.CreatedById" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Issue.CreatedDate" class="control-label"></label>
+                <input asp-for="Issue.CreatedDate" class="form-control" />
+                <span asp-validation-for="Issue.CreatedDate" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Issue.ProjectId" class="control-label"></label>
+                <select asp-for="@Model.SelectedProject" class="form-select" asp-items="ViewBag.ProjectId">
+                     <option value="">Select Project</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.AssignedToId" class="control-label"></label>
+                <select asp-for="Issue.AssignedToId" class="form-select" asp-items="ViewBag.User">
+                     <option value="">Select User</option>
+                </select>
+                <span asp-validation-for="Issue.AssignedToId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.Status" class="control-label"></label>
+                <select asp-for="Issue.Status" asp-items="Html.GetEnumSelectList<IssueStatus>()" class="form-select"></select>
+                <span asp-validation-for="Issue.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.Priority" class="control-label"></label>
+                <select asp-for="Issue.Priority" asp-items="Html.GetEnumSelectList<IssuePriority>()" class="form-select"></select>
+                <span asp-validation-for="Issue.Priority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.TargetResolutionDate" class="control-label"></label>
+                <input asp-for="Issue.TargetResolutionDate" class="form-control" />
+                <span asp-validation-for="Issue.TargetResolutionDate" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Issue.ResolutionDate" class="control-label"></label>
+                <input asp-for="Issue.ResolutionDate" class="form-control" />
+                <span asp-validation-for="Issue.ResolutionDate" class="text-danger"></span>
+            </div>*@
+            @*<div class="form-group">
+                <label asp-for="Issue.ModifiedOn" class="control-label"></label>
+                <input asp-for="Issue.ModifiedOn" class="form-control" />
+                <span asp-validation-for="Issue.ModifiedOn" class="text-danger"></span>
+            </div>*@
+            @*<div class="form-group">
+                <label asp-for="Issue.Id" class="control-label"></label>
+                <select asp-for="Issue.Id" class="form-select" asp-items="ViewBag.User"></select>
+            </div>*@
+            <div class="form-group mt-2">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

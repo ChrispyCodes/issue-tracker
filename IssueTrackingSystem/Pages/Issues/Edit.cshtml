@@ -1,0 +1,90 @@
+﻿@page
+@model IssueTrackingSystem.Pages.Issues.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Issue</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Issue.IssueId" />
+            <div class="form-group">
+                <label asp-for="Issue.Title" class="control-label"></label>
+                <input asp-for="Issue.Title" class="form-control" />
+                <span asp-validation-for="Issue.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.Description" class="control-label"></label>
+                <input asp-for="Issue.Description" class="form-control" />
+                <span asp-validation-for="Issue.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.CreatedById" class="control-label"></label>
+                <input asp-for="Issue.CreatedById" class="form-control" />
+                <span asp-validation-for="Issue.CreatedById" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.CreatedDate" class="control-label"></label>
+                <input asp-for="Issue.CreatedDate" class="form-control" />
+                <span asp-validation-for="Issue.CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.ProjectId" class="control-label"></label>
+                <select asp-for="Issue.ProjectId" class="form-control" asp-items="ViewBag.ProjectId"></select>
+                <span asp-validation-for="Issue.ProjectId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.AssignedToId" class="control-label"></label>
+                <input asp-for="Issue.AssignedToId" class="form-control" />
+                <span asp-validation-for="Issue.AssignedToId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.Status" class="control-label"></label>
+                <select asp-for="Issue.Status" class="form-control"></select>
+                <span asp-validation-for="Issue.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.Priority" class="control-label"></label>
+                <select asp-for="Issue.Priority" class="form-control"></select>
+                <span asp-validation-for="Issue.Priority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.ResolutionDate" class="control-label"></label>
+                <input asp-for="Issue.ResolutionDate" class="form-control" />
+                <span asp-validation-for="Issue.ResolutionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.TargetResolutionDate" class="control-label"></label>
+                <input asp-for="Issue.TargetResolutionDate" class="form-control" />
+                <span asp-validation-for="Issue.TargetResolutionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.ModifiedOn" class="control-label"></label>
+                <input asp-for="Issue.ModifiedOn" class="form-control" />
+                <span asp-validation-for="Issue.ModifiedOn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Issue.Id" class="control-label"></label>
+                <select asp-for="Issue.Id" class="form-control" asp-items="ViewBag.Id"></select>
+                <span asp-validation-for="Issue.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
