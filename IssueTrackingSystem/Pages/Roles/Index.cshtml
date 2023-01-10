@@ -31,30 +31,32 @@
         {
             <tr>
                 <td>
+                    @Html.DisplayFor(modelItem => role.Name)
+                </td>
+                <td>
                     @Html.DisplayFor(modelItem => role.Id)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => role.Name)
-                </td>
-                <td class="text-right">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Action
-                        </button>
-                        <div class="dropdown-menu shadow animated--grow-in">
-                            <a class="dropdown-item">
-                                <i class="fas fa-pencil-alt"></i> Edit
-                            </a>
-                            <form class="d-inline">
-                                <a class="dropdown-item"><i class="fas fa-trash-alt"></i> Delete</a>
-                            </form>
-                            @if (role.Name != "SuperAdmin")
+                    <div class="dropdown">
+                                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Actions
+                                    </button>
+                                    <ul class="dropdown-menu animated--grow-in" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" asp-page="/Roles/Index" asp-route-id="@role.Id">Edit</a></li>
+                                        <form class="d-inline">
+                                            <li><a class="dropdown-item"> Delete</a></li>
+                                        </form>
+                                    </ul>
+                    
+                    
+                 
+                            @*@if (role.Name != "SuperAdmin")
                             {
                                 <a style='margin-right:16px' asp-controller="Permission" asp-action="Index" asp-route-roleId="@role.Id" class="dropdown-item">
                                     <i class="fas fa-wrench"></i> Manage Permissions
                                 </a>
-                            }
-                        </div>
+                            }*@
+                        
                     </div>
                 </td>
             </tr>

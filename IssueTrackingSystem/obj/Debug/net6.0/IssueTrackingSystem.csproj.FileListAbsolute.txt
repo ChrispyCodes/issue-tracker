@@ -264,6 +264,11 @@ C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\I
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\IssueTrackingSystem.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\IssueTrackingSystem.RazorAssemblyInfo.cache
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\IssueTrackingSystem.RazorAssemblyInfo.cs
+C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\staticwebassets\msbuild.IssueTrackingSystem.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\staticwebassets\msbuild.build.IssueTrackingSystem.props
+C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.IssueTrackingSystem.props
+C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.IssueTrackingSystem.props
+C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
@@ -275,8 +280,3 @@ C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\r
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\IssueTrackingSystem.pdb
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\IssueTrackingSystem.genruntimeconfig.cache
 C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\ref\IssueTrackingSystem.dll
-C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\staticwebassets\msbuild.IssueTrackingSystem.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\staticwebassets\msbuild.build.IssueTrackingSystem.props
-C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.IssueTrackingSystem.props
-C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.IssueTrackingSystem.props
-C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\obj\Debug\net6.0\staticwebassets.pack.json

@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore;
 namespace IssueTrackingSystem.Pages.Users
 {
     [Authorize]
-    public class UserListModel : PageModel
+    public class IndexModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
 
-        public UserListModel(UserManager<IdentityUser> userManager)
+        public IndexModel(UserManager<IdentityUser> userManager)
         {
             _userManager = userManager;
         }
