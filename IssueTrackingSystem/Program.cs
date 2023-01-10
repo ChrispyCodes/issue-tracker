@@ -11,11 +11,12 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddRazorPages();
 
 builder.Services.AddNotyf(config => { config.DurationInSeconds = 5; config.IsDismissable = true; config.Position = NotyfPosition.BottomRight;  });
+
 
 var app = builder.Build();
 
@@ -31,6 +32,7 @@ else
     app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -40,5 +42,18 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+    
+var scope = app.Services.CreateScope();
+var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+await IssueTrackingSystem.Areas.Identity.Seeds.DefaultRoles.SeedAsync(userManager, roleManager);
+await IssueTrackingSystem.Areas.Identity.Seeds.DefaultUsers.SeedBasicUserAsync(userManager, roleManager);
+await IssueTrackingSystem.Areas.Identity.Seeds.DefaultUsers.SeedSuperAdminAsync(userManager, roleManager);
+
+      
+
+        
+    
 
 app.Run();

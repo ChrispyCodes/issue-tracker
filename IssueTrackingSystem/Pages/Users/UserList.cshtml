@@ -1,0 +1,48 @@
+﻿@page
+@model IssueTrackingSystem.Pages.Users.UserListModel
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h1>User List</h1>
+<br />
+<table class="table table-striped" id="userTable">
+    <thead>
+        <tr>
+            <th>
+                User
+            </th>
+            <th>
+                Email
+            </th>
+            <th >
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.User)
+        {
+            <tr>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => user.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => user.Email)
+                </td>
+              
+                <td>
+                    <div class="dropdown" >
+                        <button type="button" class="btn btn-primary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Action
+                        </button>
+                        <ul class="dropdown-menu shadow animated--grow-in" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" asp-page="./Roles/index" asp-route-id="@user.Id">Roles</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
