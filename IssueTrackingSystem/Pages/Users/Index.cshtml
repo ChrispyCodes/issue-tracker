@@ -26,6 +26,9 @@
                         <th>
                             Email
                         </th>
+                        <th>
+                            Id
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,7 +42,7 @@
                                         Actions
                                     </button>
                                     <ul class="dropdown-menu animated--grow-in" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" asp-page="/Roles/Index" asp-route-id="@user.Id">Manage Roles</a></li>
+                                        <li><a class="dropdown-item" asp-page="/UserRoles/Index" asp-route-userId="@user.Id">Manage Roles</a></li>
                                         
                                     </ul>
                                 </div>
@@ -50,6 +53,9 @@
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => user.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => user.Id)
                             </td>
               
                         </tr>

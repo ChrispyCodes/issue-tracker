@@ -1,0 +1,51 @@
+﻿@page
+@model IssueTrackingSystem.Pages.UserRoles.IndexModel
+@{
+    //destructure UserRoles list into usable version so Count will work on for loop
+    var userRoles = Model.ManageUserRolesModel[0].UserRoles;
+}
+<br />
+<div class="card">
+    <h5 class="card-title">Manage Roles for @Model.ManageUserRolesModel[0].UserName</h5>
+    <div id="viewAll" class="card-body table-responsive">
+        <form method="post" asp-route-userId="@Model.ManageUserRolesModel[0].UserId" class="d-inline">
+            <input asp-for="@Model.ManageUserRolesModel[0].UserId" type="hidden" />
+            <input asp-for="@Model.ManageUserRolesModel[0].UserName" type="hidden" />
+            <table class="table" id="userRolesTable">
+                <thead>
+                    <tr>                    
+                        <th>
+                            Role
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @*loop through UserRoles list from model using for loop and display data*@
+                    @for (int i = 0; i < userRoles.Count; i++)
+                    {
+                        @*iterate through Model.ManageUserRolesModel[i].UserRoles *@
+                        <tr>                          
+                            <td>
+                                @Html.DisplayFor(modelItem => userRoles[i].RoleName)
+                                <input asp-for="@Model.ManageUserRolesModel[0].UserRoles[i].RoleName" type="hidden" />
+                            </td>
+                            <td>
+                                <div class="form-check m-1">
+                                    <input asp-for="@Model.ManageUserRolesModel[0].UserRoles[i].Selected" class="form-check-input" />
+                                </div>
+                            </td>
+                        </tr>
+                    }                  
+                </tbody>
+            </table>
+            <div class="col-sm-12">
+                <button type="submit" id="save" class="btn btn-primary">                  
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

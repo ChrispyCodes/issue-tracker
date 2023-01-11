@@ -3,14 +3,14 @@
 @{
 }
 
-<form method="post" asp-action="OnPostAddRoleAsync">
+@*<form method="post" asp-action="OnPostAddRoleAsync" >
     <div class="input-group">
-        <input name="roleName" class="form-control w-25">
+        <input name="roleName" roleclass="form-control w-25">
         <span class="input-group-btn">
             <button class="btn btn-primary">Add New Role</button>
         </span>
     </div>
-</form>
+</form>*@
 
 <table class="table table-striped" id="roleTable">
     <thead>
@@ -42,7 +42,7 @@
                                         Actions
                                     </button>
                                     <ul class="dropdown-menu animated--grow-in" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" asp-page="/Roles/Index" asp-route-id="@role.Id">Edit</a></li>
+                                        <li><a class="dropdown-item" asp-page="/UserRoles/Index" asp-route-id="@role.Id">Edit</a></li>
                                         <form class="d-inline">
                                             <li><a class="dropdown-item"> Delete</a></li>
                                         </form>
