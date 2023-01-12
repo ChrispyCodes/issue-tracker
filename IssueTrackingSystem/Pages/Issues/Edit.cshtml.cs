@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using IssueTrackingSystem.Data;
 using IssueTrackingSystem.Models;
 using Microsoft.AspNetCore.Authorization;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace IssueTrackingSystem.Pages.Issues
 {
@@ -16,10 +17,14 @@ namespace IssueTrackingSystem.Pages.Issues
     public class EditModel : PageModel
     {
         private readonly ApplicationDbContext _context;
+        private readonly INotyfService _notyf;
+        [BindProperty]
+        public string SelectedProject { get; set; }
 
-        public EditModel(ApplicationDbContext context)
+        public EditModel(ApplicationDbContext context, INotyfService notyf)
         {
             _context = context;
+            _notyf = notyf;
         }
 
         [BindProperty]
@@ -38,8 +43,8 @@ namespace IssueTrackingSystem.Pages.Issues
                 return NotFound();
             }
             Issue = issue;
-           ViewData["ProjectId"] = new SelectList(_context.Projects, "ProjectId", "ProjectName");
-           ViewData["Id"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["ProjectId"] = new SelectList(_context.Projects, "ProjectId", "ProjectName");
+            ViewData["User"] = new SelectList(_context.Users, "UserName", "UserName");
             return Page();
         }
 
@@ -47,6 +52,10 @@ namespace IssueTrackingSystem.Pages.Issues
         // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            //bind selected data from selectlist to model property
+            Issue.ProjectId = int.Parse(SelectedProject);
+            Issue.ModifiedOn = DateTime.Now;
+
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -57,6 +66,7 @@ namespace IssueTrackingSystem.Pages.Issues
             try
             {
                 await _context.SaveChangesAsync();
+                _notyf.Success("Issue Created Successfully");
             }
             catch (DbUpdateConcurrencyException)
             {

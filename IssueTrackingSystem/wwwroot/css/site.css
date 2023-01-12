@@ -429,15 +429,15 @@ td {
         align-items: center;
         font-size: 15px;
         font-weight: 600;
-        color: #f6f9ff;
+        color: #4154f1;
         transition: 0.3;
         background: #f6f9ff;
         padding: 10px 15px;
         border-radius: 4px;
     }
 
-        .sidebar-nav .nav-link .active{
-            color: #f6f9ff;
+        .sidebar-nav .nav-link .active {
+            color: #4154f1;
             background: #f6f9ff;
         }
         
@@ -515,18 +515,23 @@ td {
     line-height: 1;
 }
 
-
-
 .logo img {
     max-height: 26px;
     margin-right: 6px;
 }
 
-.logo span {
-    font-size: 22px;
-    font-weight: 700;
-    font-family: "Nunito", sans-serif;
-    margin-right: 2rem;
+    .logo span {
+        font-size: 22px;
+        font-weight: 700;
+        font-family: "Nunito", sans-serif;
+        margin-right: 2rem;
+        color: #4154f1;
+    }
+
+@media (min-width: 1200px) {
+    .logo {
+        width: 240px;
+    }
 }
 
 .header {
