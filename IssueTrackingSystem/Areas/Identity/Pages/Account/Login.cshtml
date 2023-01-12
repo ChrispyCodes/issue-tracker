@@ -15,7 +15,7 @@
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
+                    <h5 class="card-title text-center pb-0 fs-3 fw-bold">Login to Your Account</h5>
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
 
@@ -35,7 +35,7 @@
                         </div>
                         <div class="col-12">
                             <div class="checkbox">
-                                <label asp-for="Input.RememberMe" class="form-label">
+                                <label asp-for="Input.RememberMe">
                                     <input class="form-check-input" asp-for="Input.RememberMe" />
                                     @Html.DisplayNameFor(m => m.Input.RememberMe)
                                 </label>

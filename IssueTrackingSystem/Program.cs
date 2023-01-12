@@ -50,10 +50,5 @@ var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityR
 await IssueTrackingSystem.Areas.Identity.Seeds.DefaultRoles.SeedAsync(userManager, roleManager);
 await IssueTrackingSystem.Areas.Identity.Seeds.DefaultUsers.SeedBasicUserAsync(userManager, roleManager);
 await IssueTrackingSystem.Areas.Identity.Seeds.DefaultUsers.SeedSuperAdminAsync(userManager, roleManager);
-
-      
-
-        
     
-
 app.Run();

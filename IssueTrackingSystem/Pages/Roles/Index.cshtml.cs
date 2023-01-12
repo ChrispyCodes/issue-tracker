@@ -48,5 +48,41 @@ namespace IssueTrackingSystem.Pages.Roles
 
             return Page();
         }
+
+        //DeleteRole method is called when the user clicks on the Delete Role button
+        public async Task<IActionResult> OnPostDeleteRoleAsync(string roleId)
+        {
+            var role = await _roleManager.FindByIdAsync(roleId);
+            if (role == null)
+            {
+                return Page();
+            }
+
+            var result = await _roleManager.DeleteAsync(role);
+
+            if (result.Succeeded)
+            {
+                return RedirectToPage();
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+
+            return Page();
+        }
+
+        //EditRole method is called when the user clicks on the Edit Role button
+        public async Task<IActionResult> OnPostEditRoleAsync(string roleId)
+        {
+            var role = await _roleManager.FindByIdAsync(roleId);
+            if (role == null)
+            {
+                return Page();
+            }
+
+            return RedirectToPage("Edit", new { id = roleId });
+        }
     }
 }
