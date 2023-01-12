@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[1.1.0, )"
             },
+            "ChartJS": {
+              "target": "Package",
+              "version": "[22.2.3, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.12, )"

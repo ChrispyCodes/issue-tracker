@@ -23,6 +23,8 @@ namespace IssueTrackingSystem.Pages.Users
         public async Task OnGet()
         {
             var currentUser = await _userManager.GetUserAsync(HttpContext.User);
+            //get currentUser roles
+            var currentUserRoles = await _userManager.GetRolesAsync(currentUser);
             var allUsersExceptCurrentUser = await _userManager.Users.Where(a => a.Id != currentUser.Id).ToListAsync();
             User = allUsersExceptCurrentUser;
         }

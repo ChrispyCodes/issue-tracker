@@ -25,6 +25,16 @@
           "buildMultiTargeting/AspNetCoreHero.ToastNotification.props": {}
         }
       },
+      "ChartJS/22.2.3": {
+        "type": "package",
+        "dependencies": {
+          "jQuery": "3.5.1",
+          "jquery-globalize": "1.1.1"
+        }
+      },
+      "cldrjs/0.4.4": {
+        "type": "package"
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -36,6 +46,15 @@
           "lib/netstandard2.0/Humanizer.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "jQuery/3.5.1": {
+        "type": "package"
+      },
+      "jquery-globalize/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "cldrjs": "0.4.4"
         }
       },
       "MessagePack/2.1.152": {
@@ -3749,6 +3768,58 @@
         "staticwebassets/toastify.js"
       ]
     },
+    "ChartJS/22.2.3": {
+      "sha512": "9mKJ/WoAkQ8CJGNcr6u+v1tCEU2bJ4uzrAa1bN/sauhJMTfRyHwBaRhmEciRGKyZiLbRukwPIjzMBVBDjUfQ4w==",
+      "type": "package",
+      "path": "chartjs/22.2.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "chartjs.22.2.3.nupkg.sha512",
+        "chartjs.nuspec",
+        "content/net/Scripts/dx.viz.debug.js",
+        "content/net/Scripts/dx.viz.js",
+        "content/net/Scripts/vectormap-data/africa.js",
+        "content/net/Scripts/vectormap-data/canada.js",
+        "content/net/Scripts/vectormap-data/eurasia.js",
+        "content/net/Scripts/vectormap-data/europe.js",
+        "content/net/Scripts/vectormap-data/usa.js",
+        "content/net/Scripts/vectormap-data/world.js",
+        "content/net/Scripts/vectormap-utils/dx.vectormaputils.debug.js",
+        "content/net/Scripts/vectormap-utils/dx.vectormaputils.js",
+        "content/net/Scripts/vectormap-utils/dx.vectormaputils.node.js",
+        "content/netcore/js/dx.viz.debug.js",
+        "content/netcore/js/dx.viz.js",
+        "content/netcore/js/vectormap-data/africa.js",
+        "content/netcore/js/vectormap-data/canada.js",
+        "content/netcore/js/vectormap-data/eurasia.js",
+        "content/netcore/js/vectormap-data/europe.js",
+        "content/netcore/js/vectormap-data/usa.js",
+        "content/netcore/js/vectormap-data/world.js",
+        "content/netcore/js/vectormap-utils/dx.vectormaputils.debug.js",
+        "content/netcore/js/vectormap-utils/dx.vectormaputils.js",
+        "content/netcore/js/vectormap-utils/dx.vectormaputils.node.js",
+        "jslogo.png",
+        "tools/install.ps1"
+      ]
+    },
+    "cldrjs/0.4.4": {
+      "sha512": "QTJ2r9FpA1XOFPRguhHAFjJZZJVil5TFOUCTLpN02BjQtgXgVDpt5VFyxQp/uNwEh0InNWLdIugl2Ls1IBqfXg==",
+      "type": "package",
+      "path": "cldrjs/0.4.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "cldrjs.0.4.4.nupkg.sha512",
+        "cldrjs.nuspec",
+        "content/Scripts/cldr.js",
+        "content/Scripts/cldr/event.js",
+        "content/Scripts/cldr/supplemental.js",
+        "content/Scripts/cldr/unresolved.js"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -3763,6 +3834,48 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "jQuery/3.5.1": {
+      "sha512": "ji6sm/AI0vjASXAA/AG9Yf5ypALAqIDXFFKPHMAnFL8kp3xqULIWhACjg/OXZP88C56frYlIej2nrdBnhTMYQQ==",
+      "type": "package",
+      "path": "jquery/3.5.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/jquery-3.5.1-vsdoc.js",
+        "Content/Scripts/jquery-3.5.1.js",
+        "Content/Scripts/jquery-3.5.1.min.js",
+        "Content/Scripts/jquery-3.5.1.min.map",
+        "Content/Scripts/jquery-3.5.1.slim.js",
+        "Content/Scripts/jquery-3.5.1.slim.min.js",
+        "Content/Scripts/jquery-3.5.1.slim.min.map",
+        "Tools/common.ps1",
+        "Tools/install.ps1",
+        "Tools/jquery-3.5.1.intellisense.js",
+        "Tools/uninstall.ps1",
+        "jquery.3.5.1.nupkg.sha512",
+        "jquery.nuspec"
+      ]
+    },
+    "jquery-globalize/1.1.1": {
+      "sha512": "tkRqYLIONjwamztg1rG+xyh2asA0ARLOPorfF3N9JW8fWr+srtPAeUNLFHF6NZAQ7Avnkzgi2OC505lK5avFag==",
+      "type": "package",
+      "path": "jquery-globalize/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Scripts/globalize.js",
+        "content/Scripts/globalize/currency.js",
+        "content/Scripts/globalize/date.js",
+        "content/Scripts/globalize/message.js",
+        "content/Scripts/globalize/number.js",
+        "content/Scripts/globalize/plural.js",
+        "content/Scripts/globalize/relative-time.js",
+        "content/Scripts/globalize/unit.js",
+        "jquery-globalize.1.1.1.nupkg.sha512",
+        "jquery-globalize.nuspec"
       ]
     },
     "MessagePack/2.1.152": {
@@ -10498,6 +10611,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "AspNetCoreHero.ToastNotification >= 1.1.0",
+      "ChartJS >= 22.2.3",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.12",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.12",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.12",
@@ -10553,6 +10667,10 @@
           "AspNetCoreHero.ToastNotification": {
             "target": "Package",
             "version": "[1.1.0, )"
+          },
+          "ChartJS": {
+            "target": "Package",
+            "version": "[22.2.3, )"
           },
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",

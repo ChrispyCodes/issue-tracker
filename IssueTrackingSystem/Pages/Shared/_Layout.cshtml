@@ -19,7 +19,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a asp-page="/Index" class="logo d-flex align-items-center">
+            <a asp-page="/Dashboard/Index" class="logo d-flex align-items-center">
        
         <span class="d-none d-lg-block"><i class="bi bi-bug"></i> Issue Tracker</span>
       </a>
@@ -41,7 +41,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed" asp-page="/index">
+                <a class="nav-link collapsed" asp-page="/Dashboard/Index">
           <i class="bi bi-house"></i>
           <span>Dashboard</span>
         </a>
@@ -110,6 +110,7 @@
   
    <div class="container-fluid">
         <main id="main" role="main" class="text align-content-center">
+           
             @RenderBody()
         </main>
         </div>
