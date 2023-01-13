@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace IssueTrackingSystem.Pages.Issues
 {
-    [Authorize]
+    [Authorize(Roles = "SuperAdmin")]
     public class DeleteModel : PageModel
     {
         private readonly ApplicationDbContext _context;
