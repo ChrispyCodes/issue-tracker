@@ -17,6 +17,7 @@
 
         public IList<Issue> Issues { get; set; } = default!;
 
+        public IList<Project> Projects { get; set; } = default!;
 
         //AverageDaysToResolve = (int)Issues.Average(i => (i.ResolvedDate - i.CreatedDate).TotalDays);
     }
