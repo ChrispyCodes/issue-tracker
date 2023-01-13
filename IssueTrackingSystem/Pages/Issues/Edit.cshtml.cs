@@ -10,6 +10,8 @@ using IssueTrackingSystem.Data;
 using IssueTrackingSystem.Models;
 using Microsoft.AspNetCore.Authorization;
 using AspNetCoreHero.ToastNotification.Abstractions;
+using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace IssueTrackingSystem.Pages.Issues
 {
@@ -18,6 +20,7 @@ namespace IssueTrackingSystem.Pages.Issues
     {
         private readonly ApplicationDbContext _context;
         private readonly INotyfService _notyf;
+        [Display(Name = "Project")]
         [BindProperty]
         public string SelectedProject { get; set; }
 
@@ -66,7 +69,7 @@ namespace IssueTrackingSystem.Pages.Issues
             try
             {
                 await _context.SaveChangesAsync();
-                _notyf.Success("Issue Created Successfully");
+                _notyf.Success("Issue Updated Successfully");
             }
             catch (DbUpdateConcurrencyException)
             {

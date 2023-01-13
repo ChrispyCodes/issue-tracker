@@ -23,6 +23,7 @@ namespace IssueTrackingSystem.Pages.Issues
 
         public IList<Issue> Issue { get;set; } = default!;
 
+
         public async Task OnGetAsync()
         {
             if (_context.Issues != null)
@@ -32,5 +33,25 @@ namespace IssueTrackingSystem.Pages.Issues
                 .Include(i => i.User).ToListAsync();
             }
         }
+
+
+        //public async Task<IActionResult> OnPostDeleteAsync(int? id)
+        //{
+
+        //    if (id == null || _context.Issues == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var issue = await _context.Issues.FindAsync(id);
+
+        //    if (issue != null)
+        //    {
+
+        //        _context.Issues.Remove(issue);
+        //        await _context.SaveChangesAsync();
+        //    }
+
+        //    return Page();
+        //}
     }
 }

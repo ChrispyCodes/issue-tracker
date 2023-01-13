@@ -71,6 +71,9 @@
                                 <li><a class="dropdown-item" asp-page="./Edit" asp-route-id="@item.IssueId">Edit</a></li>
                                 <li><a class="dropdown-item" asp-page="./Details" asp-route-id="@item.IssueId">Details</a></li>
                                 <li><a class="dropdown-item" asp-page="./Delete" asp-route-id="@item.IssueId">Delete</a></li>
+                                @*add form button link to call OnPostDeleteAsync method *@
+
+
                             </ul>
                         </div>
             </td>
@@ -128,4 +131,5 @@
 {
     
     <script src="~/js/issuesDatatable.js"></script>
+
 }

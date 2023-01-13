@@ -19,7 +19,7 @@ namespace IssueTrackingSystem.Models
         [Required]
         [Display(Name = "Date Created")]
         public DateTime? CreatedDate { get; set; } = DateTime.Now;
-        [Display(Name = "Project Id")]
+        [Display(Name = "Project")]
         public int ProjectId { get; set; }
         public virtual Project? Project { get; set; }
         [Display(Name = "Assigned")]
