@@ -38,11 +38,12 @@
                         <select asp-for="@Model.SelectedProject" class="form-select" asp-items="ViewBag.ProjectId">
                              <option value="">Select Project</option>
                         </select>
+                            <span asp-validation-for="@Model.SelectedProject" class="text-danger"></span>
                     </div>
                     <div class="form-group mb-3">
                         <label asp-for="Issue.AssignedToId" class="control-label"></label>
                         <select asp-for="Issue.AssignedToId" class="form-select" asp-items="ViewBag.User">
-                             <option value="">Select User</option>
+                             <option value="Unassigned">Select User</option>
                         </select>
                         <span asp-validation-for="Issue.AssignedToId" class="text-danger"></span>
                     </div>
