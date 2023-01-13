@@ -23,7 +23,7 @@ namespace IssueTrackingSystem.Models
         public int ProjectId { get; set; }
         public virtual Project? Project { get; set; }
         [Display(Name = "Assigned")]
-        public string? AssignedToId { get; set; }
+        public string? AssignedToId { get; set; } = "Unassigned";
         [Required] 
         public IssueStatus Status { get; set; }
         [Required]
