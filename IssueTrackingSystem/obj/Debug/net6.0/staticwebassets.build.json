@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ILmgs3d6NCkK3N16VFnbh+k1Yz7diEwKAsRbJkn7rfw=",
+  "Hash": "DRd2pfEvC1ekwfz6TOMGhojuDOCf+t4hnMVXnHrHeDw=",
   "Source": "IssueTrackingSystem",
   "BasePath": "_content/IssueTrackingSystem",
   "Mode": "Default",
@@ -1188,6 +1188,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\error.svg"
+    },
+    {
+      "Identity": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\img\\profile-img.jpg",
+      "SourceId": "IssueTrackingSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\",
+      "BasePath": "_content/IssueTrackingSystem",
+      "RelativePath": "img/profile-img.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\profile-img.jpg"
     },
     {
       "Identity": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\js\\issuesDatatable.js",

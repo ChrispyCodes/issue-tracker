@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\img\\error.svg"
     },
     {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\img\\profile-img.jpg",
+      "PackagePath": "staticwebassets\\img\\profile-img.jpg"
+    },
+    {
       "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\js\\issuesDatatable.js",
       "PackagePath": "staticwebassets\\js\\issuesDatatable.js"
     },
