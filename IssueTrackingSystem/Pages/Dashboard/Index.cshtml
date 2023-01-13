@@ -6,11 +6,11 @@
     <div class="row">
 
         <!-- Left side columns -->
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <div class="row">
 
                 <!-- Sales Card -->
-                <div class="col-xxl-4 col-md-6">
+                <div class="col">
                     <div class="card info-card sales-card">
 
                         <div class="filter">
@@ -68,7 +68,7 @@
                                     <i class="bi bi-currency-dollar"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>$3,264</h6>
+                                    <h6>7</h6>
                                     <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
 
                                 </div>
@@ -103,7 +103,7 @@
                                     <i class="bi bi-people"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>1244</h6>
+                                    <h6>12</h6>
                                     <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
 
                                 </div>
@@ -211,63 +211,97 @@
                             </ul>
                         </div>
 
-                        <div class="card-body">
-                            <h5 class="card-title">Recent Sales <span>| Today</span></h5>
+                        <div class="card">
 
-                            <table class="table table-borderless datatable">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Customer</th>
-                                        <th scope="col">Product</th>
-                                        <th scope="col">Price</th>
-                                        <th scope="col">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row"><a href="#">#2457</a></th>
-                                        <td>Brandon Jacob</td>
-                                        <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                                        <td>$64</td>
-                                        <td><span class="badge bg-success">Approved</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><a href="#">#2147</a></th>
-                                        <td>Bridie Kessler</td>
-                                        <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
-                                        <td>$47</td>
-                                        <td><span class="badge bg-warning">Pending</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><a href="#">#2049</a></th>
-                                        <td>Ashleigh Langosh</td>
-                                        <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
-                                        <td>$147</td>
-                                        <td><span class="badge bg-success">Approved</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><a href="#">#2644</a></th>
-                                        <td>Angus Grady</td>
-                                        <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
-                                        <td>$67</td>
-                                        <td><span class="badge bg-danger">Rejected</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><a href="#">#2644</a></th>
-                                        <td>Raheem Lehner</td>
-                                        <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
-                                        <td>$165</td>
-                                        <td><span class="badge bg-success">Approved</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="card-body">
+                                @*div with classes to show card-title and create new link on same line with the link being on right side of card*@
+                                <div class="align-middle pb-2">
 
-                        </div>
+                                    <h2 class="card-title d-inline-block">Issues Assigned to @User.Identity.Name</h2>
+                                    <a class="btn btn-outline-primary float-end " asp-page="/Issues/Create"><i class="bi bi-plus-lg" style="font-weight: bold;"></i> Create New</a>
+                                </div>
+                                <div class="table-responsive">
+                                    <table id="issuesTable" class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Actions</th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Issue[0].AssignedToId)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Issue[0].TargetResolutionDate)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Issue[0].Project)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Issue[0].Status)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Issue[0].Priority)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Issue[0].Title)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Issue[0].Description)
+                                                </th>                                              
+                                              
 
-                    </div>
-                </div><!-- End Recent Sales -->
-                <!-- Top Selling -->
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model.Issue)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        @*create a dropdown list button with edit and delete links and routes*@
+                                                        <div class="dropdown">
+                                                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Actions
+                                                            </button>
+                                                            <ul class="dropdown-menu shadow animated--grow-in" aria-labelledby="dropdownMenuButton">
+                                                                <li><a class="dropdown-item" asp-page="/Issues/Edit" asp-route-id="@item.IssueId">Edit</a></li>
+                                                                <li><a class="dropdown-item" asp-page="/Issues/Details" asp-route-id="@item.IssueId">Details</a></li>
+                                                                <li><a class="dropdown-item" asp-page="/Issues/Delete" asp-route-id="@item.IssueId">Delete</a></li>
+                                                                @*add form button link to call OnPostDeleteAsync method *@
+
+
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.AssignedToId)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.TargetResolutionDate)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Project.ProjectName)
+                                                    </td>                                              
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Status)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Priority)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Title)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Description)
+                                                    </td>
+                                                    
+
+
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!-- End Issues Table -->
+              @*  <!-- Top Selling -->
                 <div class="col-12">
                     <div class="card top-selling overflow-auto">
 
@@ -492,7 +526,7 @@
                 </div>
             </div><!-- End Budget Report -->
            
-           
+           *@
 
         </div><!-- End Right side columns -->
 
