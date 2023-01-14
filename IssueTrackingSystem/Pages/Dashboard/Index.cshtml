@@ -210,6 +210,7 @@
                                 <li><a class="dropdown-item" href="#">This Year</a></li>
                             </ul>
                         </div>
+                    </div>
 
                         <div class="card">
 
@@ -226,32 +227,32 @@
                                             <tr>
                                                 <th>Actions</th>
                                                 <th>
-                                                    @Html.DisplayNameFor(model => model.Issue[0].AssignedToId)
+                                                    @Html.DisplayNameFor(model => model.DashboardViewModel.Issues[0].AssignedToId)
                                                 </th>
                                                 <th>
-                                                    @Html.DisplayNameFor(model => model.Issue[0].TargetResolutionDate)
+                                                @Html.DisplayNameFor(model => model.DashboardViewModel.Issues[0].TargetResolutionDate)
                                                 </th>
                                                 <th>
-                                                    @Html.DisplayNameFor(model => model.Issue[0].Project)
+                                                @Html.DisplayNameFor(model => model.DashboardViewModel.Issues[0].Project)
                                                 </th>
                                                 <th>
-                                                    @Html.DisplayNameFor(model => model.Issue[0].Status)
+                                                @Html.DisplayNameFor(model => model.DashboardViewModel.Issues[0].Status)
                                                 </th>
                                                 <th>
-                                                    @Html.DisplayNameFor(model => model.Issue[0].Priority)
+                                                @Html.DisplayNameFor(model => model.DashboardViewModel.Issues[0].Priority)
                                                 </th>
                                                 <th>
-                                                    @Html.DisplayNameFor(model => model.Issue[0].Title)
+                                                @Html.DisplayNameFor(model => model.DashboardViewModel.Issues[0].Title)
                                                 </th>
                                                 <th>
-                                                    @Html.DisplayNameFor(model => model.Issue[0].Description)
+                                                    @Html.DisplayNameFor(model => model.DashboardViewModel.Issues[0].Description)
                                                 </th>                                              
                                               
 
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach (var item in Model.Issue)
+                                            @foreach (var item in Model.DashboardViewModel.Issues)
                                             {
                                                 <tr>
                                                     <td>
@@ -527,7 +528,9 @@
             </div><!-- End Budget Report -->
            
            *@
-
+                    
+                    </div>
+           </div>
         </div><!-- End Right side columns -->
 
     </div>

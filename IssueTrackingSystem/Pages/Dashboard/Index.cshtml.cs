@@ -23,6 +23,7 @@ namespace IssueTrackingSystem.Pages.Dashboard
         public IList<Project> Project { get; set; } = default!;
         public IList<Issue> OverdueIssues { get; set; } = default!;
 
+        public DashboardViewModel DashboardViewModel { get; set; } = default!;
 
         public async Task OnGetAsync()
         {
@@ -30,20 +31,22 @@ namespace IssueTrackingSystem.Pages.Dashboard
             if (_context.Issues != null)
             {
                 var currentUser = await _userManager.GetUserAsync(HttpContext.User);
-                //get issues assigned to the current user
-                Issue = await _context.Issues
-                    .Include(i => i.Project)
+                DashboardViewModel = new DashboardViewModel
+                {
+                    OverdueIssues = await _context.Issues.Where(i => i.ResolutionDate > i.TargetResolutionDate).CountAsync(),
+                    OpenIssues = await _context.Issues.Where(i => i.Status == IssueStatus.Open).CountAsync(),
+                    TotalIssues = await _context.Issues.CountAsync(),
+                    TotalProjects = await _context.Projects.CountAsync(),
+                    TotalUsers = await _context.Users.CountAsync(),
+                    Issues = await _context.Issues.Include(i => i.Project)
                     .Include(i => i.User)
                     .Where(i => i.AssignedToId == currentUser.UserName || i.Status == IssueStatus.Open)
-                    .ToListAsync();
+                    .ToListAsync(),
+                    Projects = await _context.Projects.ToListAsync(),
+                    //AverageDaysToResolve = (int)await _context.Issues.AverageAsync(i => (i.ResolutionDate - i.CreatedDate).Value.TotalDays)
+                };
 
                 
-                //get list of Issues that are overdue where ResolutionDate is a later date TargetResolutionDate
-                OverdueIssues = await _context.Issues
-                    .Include(i => i.Project)
-                    .Include(i => i.User)
-                    .Where(i => i.ResolutionDate > i.TargetResolutionDate)
-                    .ToListAsync();
             }
             if (_context.Projects != null)
             {
