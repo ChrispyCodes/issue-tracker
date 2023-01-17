@@ -33,15 +33,15 @@ namespace IssueTrackingSystem.Pages.Issues
             if (_context.Issues != null)
             {
                 var currentUser = await _userManager.GetUserAsync(HttpContext.User);
-                Issue = await _context.Issues
-                        .Include(i => i.Project)
-                        .Include(i => i.User)
-                        .ToListAsync();
+                Issue = await _context.Issues.Include(i => i.Project)
+                    .Include(i => i.User)
+                    .Where(i => i.AssignedToId == currentUser.UserName && i.Status != IssueStatus.Closed)
+                    .ToListAsync();
 
                 OverdueIssues = await _context.Issues
                    .Include(i => i.Project)
                    .Include(i => i.User)
-                   .Where(i => i.ResolutionDate > i.TargetResolutionDate)
+                   .Where(i => i.ResolutionDate > i.TargetResolutionDate && i.AssignedToId == currentUser.UserName && i.Status != IssueStatus.Closed)
                    .ToListAsync();
             }
             

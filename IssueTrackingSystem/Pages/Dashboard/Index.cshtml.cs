@@ -42,20 +42,32 @@ namespace IssueTrackingSystem.Pages.Dashboard
                     TotalUsers = await _context.Users.CountAsync(),
                     Issues = await _context.Issues.Include(i => i.Project)
                     .Include(i => i.User)
-                    .Where(i => i.AssignedToId == currentUser.UserName && i.Status == IssueStatus.Open)
+                    .Where(i => i.Status != IssueStatus.Closed)
                     .ToListAsync(),
                     Projects = await _context.Projects.ToListAsync(),
-                 
-
-
-
+     
                 };
+                
+                OverdueIssues = await _context.Issues
+                   .Include(i => i.Project)
+                   .Include(i => i.User)
+                   .Where(i => i.ResolutionDate > i.TargetResolutionDate)
+                   .ToListAsync();
+                
                 //Get count of Issues from each project 
                 OpenIssuesByProject = await _context.Projects.Include(p => p.Issues).Where(p => p.Issues.Count != 0).ToListAsync();
-                //create list with the average days it takes issues to be resolved and status closed
-                
+                //create list with the average amount of days it takes issues to be resolved by assigning the average of the difference between the ResolutionDate and the CreatedDate to the property
 
-
+                //var averageDaysToResolve = _context.Issues.Where(i => i.ResolutionDate != null).Select(i => (i.ResolutionDate - i.CreatedDate).Value.Days).Average();
+                //foreach (var issue in _context.Issues)
+                //{                  
+                //        if (issue.ResolutionDate != null)
+                //        {
+                //            var daysToResolve = Average(i => (i.ResolutionDate - i.CreatedDate).TotalDays);
+                //        averageDaysToResolve.Add(daysToResolve);
+                //        }
+                //    }
+                //}
 
             }
             if (_context.Projects != null)

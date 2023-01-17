@@ -20,6 +20,18 @@ builder.Services.AddNotyf(config => { config.DurationInSeconds = 5; config.IsDis
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    await IssueTrackingSystem.Areas.Identity.Seeds.DefaultRoles.SeedAsync(userManager, roleManager);
+    await IssueTrackingSystem.Areas.Identity.Seeds.DefaultUsers.SeedBasicUserAsync(userManager, roleManager);
+    await IssueTrackingSystem.Areas.Identity.Seeds.DefaultUsers.SeedSuperAdminAsync(userManager, roleManager);
+
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -44,11 +56,11 @@ app.UseAuthorization();
 app.MapRazorPages();
 
     
-var scope = app.Services.CreateScope();
-var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
-var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-await IssueTrackingSystem.Areas.Identity.Seeds.DefaultRoles.SeedAsync(userManager, roleManager);
-await IssueTrackingSystem.Areas.Identity.Seeds.DefaultUsers.SeedBasicUserAsync(userManager, roleManager);
-await IssueTrackingSystem.Areas.Identity.Seeds.DefaultUsers.SeedSuperAdminAsync(userManager, roleManager);
+//var scope = app.Services.CreateScope();
+//var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+//var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+//await IssueTrackingSystem.Areas.Identity.Seeds.DefaultRoles.SeedAsync(userManager, roleManager);
+//await IssueTrackingSystem.Areas.Identity.Seeds.DefaultUsers.SeedBasicUserAsync(userManager, roleManager);
+//await IssueTrackingSystem.Areas.Identity.Seeds.DefaultUsers.SeedSuperAdminAsync(userManager, roleManager);
     
 app.Run();

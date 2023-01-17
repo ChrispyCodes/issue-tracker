@@ -437,6 +437,30 @@
       "PackagePath": "staticwebassets\\lib\\echarts\\extension\\dataTool.min.js"
     },
     {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\fullcalendar\\index.esm.js",
+      "PackagePath": "staticwebassets\\lib\\fullcalendar\\index.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\fullcalendar\\index.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\fullcalendar\\index.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\fullcalendar\\index.global.js",
+      "PackagePath": "staticwebassets\\lib\\fullcalendar\\index.global.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\fullcalendar\\index.global.min.js",
+      "PackagePath": "staticwebassets\\lib\\fullcalendar\\index.global.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\fullcalendar\\index.js",
+      "PackagePath": "staticwebassets\\lib\\fullcalendar\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\fullcalendar\\index.min.js",
+      "PackagePath": "staticwebassets\\lib\\fullcalendar\\index.min.js"
+    },
+    {
       "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
@@ -483,6 +507,22 @@
     {
       "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\toastr.js\\toastr.css",
+      "PackagePath": "staticwebassets\\lib\\toastr.js\\toastr.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\toastr.js\\toastr.js.map",
+      "PackagePath": "staticwebassets\\lib\\toastr.js\\toastr.js.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\toastr.js\\toastr.min.css",
+      "PackagePath": "staticwebassets\\lib\\toastr.js\\toastr.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\toastr.js\\toastr.min.js",
+      "PackagePath": "staticwebassets\\lib\\toastr.js\\toastr.min.js"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.IssueTrackingSystem.Microsoft.AspNetCore.StaticWebAssets.props",
