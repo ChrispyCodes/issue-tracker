@@ -24,22 +24,8 @@
                         </div>
                         <div class="form-group mb-3">
                             <label asp-for="Issue.Description" class="control-label"></label>
-                            <input asp-for="Issue.Description" class="form-control" />
+                            <textarea asp-for="Issue.Description" class="form-control"></textarea>
                             <span asp-validation-for="Issue.Description" class="text-danger"></span>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label asp-for="Issue.CreatedById" class="control-label"></label>
-                            <select asp-for="Issue.CreatedById" class="form-select" asp-items="ViewBag.User">
-                                <option value="">Select User</option>
-                            </select>
-                            <span asp-validation-for="Issue.CreatedById" class="text-danger"></span>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label asp-for="Issue.ProjectId" class="control-label"></label>
-                            <select asp-for="@Model.SelectedProject" class="form-select" asp-items="ViewBag.ProjectId">
-                                <option value="">Select Project</option>
-                            </select>
-                            <span asp-validation-for="@Model.SelectedProject" class="text-danger"></span>
                         </div>
                         <div class="form-group mb-3">
                             <label asp-for="Issue.AssignedToId" class="control-label"></label>
@@ -63,12 +49,6 @@
                             <input asp-for="Issue.TargetResolutionDate" class="form-control" />
                             <span asp-validation-for="Issue.TargetResolutionDate" class="text-danger"></span>
                         </div>
-                        <div class="form-group mb-3">
-                            <label asp-for="Issue.ResolutionDate" class="control-label"></label>
-                            <input asp-for="Issue.ResolutionDate" class="form-control" />
-                            <span asp-validation-for="Issue.ResolutionDate" class="text-danger"></span>
-                        </div>
-                      
 
                         <div class="form-group mb-3">
                             <button type="submit" class="btn btn-primary">

@@ -46,7 +46,7 @@ namespace IssueTrackingSystem.Pages.Issues
                 return NotFound();
             }
             Issue = issue;
-            ViewData["ProjectId"] = new SelectList(_context.Projects, "ProjectId", "ProjectName");
+            ViewData["ProjectId"] = new SelectList(_context.Projects, "ProjectName", "ProjectName");
             ViewData["User"] = new SelectList(_context.Users, "UserName", "UserName");
             return Page();
         }
@@ -56,8 +56,13 @@ namespace IssueTrackingSystem.Pages.Issues
         public async Task<IActionResult> OnPostAsync()
         {
             //bind selected data from selectlist to model property
-            Issue.ProjectId = int.Parse(SelectedProject);
+            //Issue.ProjectId = int.Parse(SelectedProject);
             Issue.ModifiedOn = DateTime.Now;
+            
+            if(Issue.Status == IssueStatus.Closed)
+            {
+                Issue.ResolutionDate = DateTime.Now;
+            }
 
             if (!ModelState.IsValid)
             {
