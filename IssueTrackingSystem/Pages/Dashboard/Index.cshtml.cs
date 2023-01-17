@@ -53,7 +53,7 @@ namespace IssueTrackingSystem.Pages.Dashboard
                 //Get count of Issues from each project 
                 OpenIssuesByProject = await _context.Projects.Include(p => p.Issues).Where(p => p.Issues.Count != 0).ToListAsync();
                 //create list with the average days it takes issues to be resolved and status closed
-                var averageDaysToResolve = await _context.Issues.Where(i => i.Status == IssueStatus.Closed && i.AssignedToId == currentUser.UserName).Select(i => i.ResolutionDate - i.CreatedDate).ToListAsync();
+                
 
 
 

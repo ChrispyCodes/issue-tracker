@@ -5,11 +5,18 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<div class="pagetitle">
+    <h1>Details</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-page="/Dashboard/Index">Dashboard</a></li>
+            <li class="breadcrumb-item">Issues</li>
+            <li class="breadcrumb-item active">Details</li>    
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
 
 <div>
-    <h4>Issue :</h4>
-    <hr />
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Issue.Title)

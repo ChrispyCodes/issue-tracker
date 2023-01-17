@@ -4,7 +4,17 @@
     //destructure UserRoles list into usable version so Count will work on for loop
     var userRoles = Model.ManageUserRolesModel[0].UserRoles;
 }
-<br />
+
+<div class="pagetitle">
+    <h1>User Roles</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-page="/Dashboard/Index">Dashboard</a></li>
+            <li class="breadcrumb-item">User Roles</li>    
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
 <div class="card">
     <h5 class="card-title">Manage Roles for @Model.ManageUserRolesModel[0].UserName</h5>
     <div id="viewAll" class="card-body table-responsive">
