@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Linq;
 
 namespace IssueTrackingSystem.Pages.Dashboard
 {
@@ -19,9 +20,10 @@ namespace IssueTrackingSystem.Pages.Dashboard
             _userManager = userManager;
         }
 
-        public IList<Issue> Issue { get; set; } = default!;
-        public IList<Project> Project { get; set; } = default!;
+        public IList<Project> OpenIssuesByProject { get; set; } = default!;
+        public IList<Project> Projects { get; set; } = default!;
         public IList<Issue> OverdueIssues { get; set; } = default!;
+      
 
         public DashboardViewModel DashboardViewModel { get; set; } = default!;
 
@@ -40,17 +42,26 @@ namespace IssueTrackingSystem.Pages.Dashboard
                     TotalUsers = await _context.Users.CountAsync(),
                     Issues = await _context.Issues.Include(i => i.Project)
                     .Include(i => i.User)
-                    .Where(i => i.AssignedToId == currentUser.UserName || i.Status == IssueStatus.Open)
+                    .Where(i => i.AssignedToId == currentUser.UserName && i.Status == IssueStatus.Open)
                     .ToListAsync(),
                     Projects = await _context.Projects.ToListAsync(),
-                    //AverageDaysToResolve = (int)await _context.Issues.AverageAsync(i => (i.ResolutionDate - i.CreatedDate).Value.TotalDays)
-                };
+                 
 
-                
+
+
+                };
+                //Get count of Issues from each project 
+                OpenIssuesByProject = await _context.Projects.Include(p => p.Issues).Where(p => p.Issues.Count != 0).ToListAsync();
+                //create list with the average days it takes issues to be resolved and status closed
+                var averageDaysToResolve = await _context.Issues.Where(i => i.Status == IssueStatus.Closed && i.AssignedToId == currentUser.UserName).Select(i => i.ResolutionDate - i.CreatedDate).ToListAsync();
+
+
+
             }
             if (_context.Projects != null)
             {
-                Project = await _context.Projects.ToListAsync();
+                Projects = await _context.Projects.ToListAsync();
+                  
             }
         }
     }

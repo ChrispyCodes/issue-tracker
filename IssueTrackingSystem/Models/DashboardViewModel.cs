@@ -11,7 +11,7 @@
 
         public int TotalUsers { get; set; }
 
-        public int AverageDaysToResolve { get; set; }
+        public double AverageDaysToResolve { get; set; }
         
         
 

@@ -18,7 +18,7 @@ namespace IssueTrackingSystem.Models
         [Display(Name = "Target End Date")]
         public DateTime? TargetEndDate { get; set; }
 
-        //public List<Issue>? Issues { get; set; }
+        public virtual List<Issue>? Issues { get; set; }
 
     }
 }

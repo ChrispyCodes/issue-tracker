@@ -409,6 +409,34 @@
       "PackagePath": "staticwebassets\\lib\\datatables\\js\\jquery.dataTables.min.js"
     },
     {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\echarts.min.js",
+      "PackagePath": "staticwebassets\\lib\\echarts\\echarts.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\extension\\bmap.js",
+      "PackagePath": "staticwebassets\\lib\\echarts\\extension\\bmap.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\extension\\bmap.js.map",
+      "PackagePath": "staticwebassets\\lib\\echarts\\extension\\bmap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\extension\\bmap.min.js",
+      "PackagePath": "staticwebassets\\lib\\echarts\\extension\\bmap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\extension\\dataTool.js",
+      "PackagePath": "staticwebassets\\lib\\echarts\\extension\\dataTool.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\extension\\dataTool.js.map",
+      "PackagePath": "staticwebassets\\lib\\echarts\\extension\\dataTool.js.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\extension\\dataTool.min.js",
+      "PackagePath": "staticwebassets\\lib\\echarts\\extension\\dataTool.min.js"
+    },
+    {
       "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
