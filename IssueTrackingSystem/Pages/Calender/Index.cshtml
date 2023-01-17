@@ -1,0 +1,37 @@
+﻿@page
+@using Microsoft.CodeAnalysis.Scripting;
+@model IssueTrackingSystem.Pages.Calender.IndexModel
+@{
+}
+
+<div class="pagetitle">
+    <h1>Calender</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-page="/Dashboard/Index">Dashboard</a></li>
+            <li class="breadcrumb-item active">Calender</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+
+<div class="card p-4">
+    <div id='calendar'></div>
+</div>
+@section Scripts
+{
+   @*add fullcalender js file here*@
+    <script src="~/lib/fullcalendar/index.global.js"></script>
+   
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+
+    </script>
+}
