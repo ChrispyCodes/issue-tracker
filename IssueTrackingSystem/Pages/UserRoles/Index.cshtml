@@ -16,7 +16,7 @@
 </div><!-- End Page Title -->
 
 <div class="card">
-    <h5 class="card-title">Manage Roles for @Model.ManageUserRolesModel[0].UserName</h5>
+    <h4 class="card-title px-3 pt-3">Manage Roles: @Model.ManageUserRolesModel[0].UserName</h4>
     <div id="viewAll" class="card-body table-responsive">
         <form method="post" asp-route-userId="@Model.ManageUserRolesModel[0].UserId" class="d-inline">
             <input asp-for="@Model.ManageUserRolesModel[0].UserId" type="hidden" />
