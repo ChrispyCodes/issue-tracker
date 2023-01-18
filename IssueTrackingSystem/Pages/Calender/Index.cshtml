@@ -2,10 +2,11 @@
 @using Microsoft.CodeAnalysis.Scripting;
 @model IssueTrackingSystem.Pages.Calender.IndexModel
 @{
+    var eventsArr = ViewData["Events"];
 }
 
 <div class="pagetitle">
-    <h1>Calender</h1>
+    <h1>Issue Due Dates</h1>
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a asp-page="/Dashboard/Index">Dashboard</a></li>
@@ -18,20 +19,55 @@
 <div class="card p-4">
     <div id='calendar'></div>
 </div>
+
 @section Scripts
 {
-   @*add fullcalender js file here*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="~/lib/fullcalendar/index.global.js"></script>
-   
+
+
     <script>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth'
-            });
-            calendar.render();
-        });
+        var dataObj = [];
+        var momentStart = "";
+        var momentStartString = "";
 
+        var momentEnd = "";
+        var momentEndString = "";
+        //loop through data and add values to obj
+        @foreach (var i in Model.Issue)
+        {
+            if (Model.Issue.Count > 0)
+            {
+                @:momentStart = moment('@i.CreatedDate', 'MM-DD-YYYY');
+                @:momentStartString = momentStart.format('YYYY-MM-DD');
+                @:momentEnd = moment('@i.TargetResolutionDate', 'MM-DD-YYYY');
+                @:momentEndString = momentEnd.format('YYYY-MM-DD');
+                @:dataObj.push({ title: '@i.Title', start: momentEndString, })
+
+            }
+        }
+
+       
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                     headerToolbar: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                    },
+                    events: dataObj,
+                    
+                    
+
+
+                });
+                calendar.render();
+            });
+        
+        
     </script>
 }
