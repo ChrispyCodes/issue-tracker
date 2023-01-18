@@ -1,5 +1,6 @@
 using IssueTrackingSystem.Data;
 using IssueTrackingSystem.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -8,12 +9,12 @@ using Newtonsoft.Json;
 
 namespace IssueTrackingSystem.Pages.Calender
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;
 
-        public IList<EventsViewModel> events { get; set; }
         public IndexModel(ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
@@ -35,25 +36,7 @@ namespace IssueTrackingSystem.Pages.Calender
                 .ToListAsync();
 
                 //return 
-            }
-
-            events = new List<EventsViewModel>();
-
-            foreach (var issue in Issue)
-            {
-                events.Add(new EventsViewModel
-                {
-                    id = issue.IssueId,
-                    title = issue.Title,
-                    start = issue.CreatedDate.ToString(),
-                    end = issue.TargetResolutionDate.ToString(),
-                    allDay = false
-                });
-            }
-            ViewData["Events"] = JsonConvert.SerializeObject(events);
-        }
-        
-       
-        
+            }     
+        }    
     }
 }

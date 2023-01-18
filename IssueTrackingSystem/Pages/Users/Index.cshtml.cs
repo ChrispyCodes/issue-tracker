@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IssueTrackingSystem.Pages.Users
 {
-    [Authorize]
+    [Authorize(Roles = "SuperAdmin")]
     public class IndexModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
