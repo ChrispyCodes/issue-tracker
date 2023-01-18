@@ -20,9 +20,8 @@ namespace IssueTrackingSystem.Pages.Issues
     {
         private readonly ApplicationDbContext _context;
         private readonly INotyfService _notyf;
-        [Display(Name = "Project")]
-        [BindProperty]
-        public string SelectedProject { get; set; }
+        
+        
 
         public EditModel(ApplicationDbContext context, INotyfService notyf)
         {
@@ -32,6 +31,7 @@ namespace IssueTrackingSystem.Pages.Issues
 
         [BindProperty]
         public Issue Issue { get; set; } = default!;
+        public int ProjectIdforPost { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -48,6 +48,7 @@ namespace IssueTrackingSystem.Pages.Issues
             Issue = issue;
             ViewData["ProjectId"] = new SelectList(_context.Projects, "ProjectName", "ProjectName");
             ViewData["User"] = new SelectList(_context.Users, "UserName", "UserName");
+            ProjectIdforPost = Issue.ProjectId;
             return Page();
         }
 
@@ -58,6 +59,7 @@ namespace IssueTrackingSystem.Pages.Issues
             //bind selected data from selectlist to model property
             //Issue.ProjectId = int.Parse(SelectedProject);
             Issue.ModifiedOn = DateTime.Now;
+            
             
             if(Issue.Status == IssueStatus.Closed)
             {
