@@ -19,11 +19,14 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-            <a asp-page="/Dashboard/Index" class="logo d-flex align-items-center">
+            <a asp-page="/Index" class="logo d-flex align-items-center">
        
         <span class="d-none d-lg-block"><i class="bi bi-bug"></i> Issue Tracker</span>
       </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
+      @if (User.Identity.IsAuthenticated)
+        {
+          <i class="bi bi-list toggle-sidebar-btn"></i>
+        }
     </div><!-- End Logo -->
 
     <nav class="header-nav ms-auto">
@@ -34,70 +37,71 @@
     </nav><!-- End Icons Navigation -->
 
   </header><!-- End Header -->
+    @if (User.Identity.IsAuthenticated)
+    {
+        <!-- ======= Sidebar ======= -->
+        <aside id="sidebar" class="sidebar">
 
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
+            <ul class="sidebar-nav" id="sidebar-nav">
 
-    <ul class="sidebar-nav" id="sidebar-nav">
+                <li class="nav-item">
+                    <a class="nav-link collapsed" asp-page="/Index">
+                        <i class="bi bi-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li><!-- End Dashboard Nav -->
 
-      <li class="nav-item">
-                <a class="nav-link collapsed" asp-page="/Dashboard/Index">
-          <i class="bi bi-house"></i>
-          <span>Dashboard</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
-      
-        <li class="nav-item">
-        <a class="nav-link collapsed" asp-page="/Issues/index">
-          <i class="bi bi-bug"></i>
-          <span>Issues</span>
-        </a>
-      </li><!-- End Issues Nav -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" asp-page="/Issues/index">
+                        <i class="bi bi-bug"></i>
+                        <span>Issues</span>
+                    </a>
+                </li><!-- End Issues Nav -->
 
-       <li class="nav-item">
-        <a class="nav-link collapsed" asp-page="/Projects/Index">
-          <i class="bi bi-kanban"></i>
-          <span>Projects</span>
-        </a>
-      </li><!-- End Projects Nav -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" asp-page="/Projects/Index">
+                        <i class="bi bi-kanban"></i>
+                        <span>Projects</span>
+                    </a>
+                </li><!-- End Projects Nav -->
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" asp-page="/Calender/Index">
-                <i class="bi bi-kanban"></i>
-                <span>Calender</span>
-            </a>
-        </li><!-- End Calender Nav -->
-      
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="tables-general.html">
-              <i class="bi bi-circle"></i><span>General Tables</span>
-            </a>
-          </li>
-          <li>
-            <a href="tables-data.html">
-              <i class="bi bi-circle"></i><span>Data Tables</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Tables Nav -->
-            @if (User.IsInRole("SuperAdmin") | User.IsInRole("Admin"))
-            {
-      <li class="nav-heading">Admin Pages</li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" asp-page="/Calender/Index">
+                        <i class="bi bi-kanban"></i>
+                        <span>Calender</span>
+                    </a>
+                </li><!-- End Calender Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" asp-page="/Users/Index">
-          <i class="bi bi-person"></i>
-          <span>Users</span>
-        </a>
-      </li><!-- End Users Page Nav -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li>
+                            <a href="tables-general.html">
+                                <i class="bi bi-circle"></i><span>General Tables</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tables-data.html">
+                                <i class="bi bi-circle"></i><span>Data Tables</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li><!-- End Tables Nav -->
+                @if (User.IsInRole("SuperAdmin") | User.IsInRole("Admin"))
+                {
+                    <li class="nav-heading">Admin Pages</li>
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" asp-page="/Roles/Index">
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-page="/Users/Index">
+                            <i class="bi bi-person"></i>
+                            <span>Users</span>
+                        </a>
+                    </li><!-- End Users Page Nav -->
+
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-page="/Roles/Index">
           <i class="bi bi-card-list"></i>
           <span>Roles</span>
         </a>
@@ -108,7 +112,7 @@
     </ul>
 
   </aside><!-- End Sidebar-->
-
+  }
   
    <div class="container-fluid">
         <main id="main" role="main" class="text align-content-center">

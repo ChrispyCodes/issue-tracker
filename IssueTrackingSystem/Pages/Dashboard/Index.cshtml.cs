@@ -15,6 +15,7 @@ namespace IssueTrackingSystem.Pages.Dashboard
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;
+        
 
         public IndexModel(ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
@@ -55,21 +56,22 @@ namespace IssueTrackingSystem.Pages.Dashboard
                    .Include(i => i.User)
                    .Where(i => i.ResolutionDate > i.TargetResolutionDate)
                    .ToListAsync();
-                
+
                 //Get count of Issues from each project 
                 OpenIssuesByProject = await _context.Projects.Include(p => p.Issues).Where(p => p.Issues.Count != 0).ToListAsync();
-                //create list with the average amount of days it takes issues to be resolved by assigning the average of the difference between the ResolutionDate and the CreatedDate to the property
 
-                //var averageDaysToResolve = _context.Issues.Where(i => i.ResolutionDate != null).Select(i => (i.ResolutionDate - i.CreatedDate).Value.Days).Average();
-                //foreach (var issue in _context.Issues)
-                //{                  
-                //        if (issue.ResolutionDate != null)
-                //        {
-                //            var daysToResolve = Average(i => (i.ResolutionDate - i.CreatedDate).TotalDays);
-                //        averageDaysToResolve.Add(daysToResolve);
-                //        }
-                //    }
-                //}
+
+                //get total Issues grouped by month to display in bar chart
+                var issuesByMonth = await _context.Issues
+                       .GroupBy(i => new { i.CreatedDate.DayOfWeek })
+                       .Select(g => new { Month = g.Key.DayOfWeek, Count = g.Count() })
+                       .ToListAsync();
+                //create empty array
+                
+
+              
+
+
 
             }
             if (_context.Projects != null)

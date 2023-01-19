@@ -71,3 +71,17 @@ if (selectHeader) {
     window.addEventListener('load', headerScrolled)
     onscroll(document, headerScrolled)
 }
+
+/**
+   * Autoresize echart charts
+   */
+const mainContainer = select('#main');
+if (mainContainer) {
+    setTimeout(() => {
+        new ResizeObserver(function () {
+            select('.echart', true).forEach(getEchart => {
+                echarts.getInstanceByDom(getEchart).resize();
+            })
+        }).observe(mainContainer);
+    }, 200);
+}
