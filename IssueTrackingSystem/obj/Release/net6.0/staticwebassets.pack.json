@@ -1,0 +1,545 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\IssueTrackingSystem.bundle.scp.css",
+      "PackagePath": "staticwebassets\\IssueTrackingSystem.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\img\\error.svg",
+      "PackagePath": "staticwebassets\\img\\error.svg"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\img\\profile-img.jpg",
+      "PackagePath": "staticwebassets\\img\\profile-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\js\\issuesDatatable.js",
+      "PackagePath": "staticwebassets\\js\\issuesDatatable.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\js\\projectsDatatable.js",
+      "PackagePath": "staticwebassets\\js\\projectsDatatable.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables.net-bs5\\dataTables.bootstrap5.css",
+      "PackagePath": "staticwebassets\\lib\\datatables.net-bs5\\dataTables.bootstrap5.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables.net-bs5\\dataTables.bootstrap5.js",
+      "PackagePath": "staticwebassets\\lib\\datatables.net-bs5\\dataTables.bootstrap5.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables.net-bs5\\dataTables.bootstrap5.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables.net-bs5\\dataTables.bootstrap5.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables.net-bs5\\dataTables.bootstrap5.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables.net-bs5\\dataTables.bootstrap5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.bootstrap4.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.foundation.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.foundation.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.jqueryui.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.material.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.material.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.material.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.material.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.semanticui.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.semanticui.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.uikit.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.uikit.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\dataTables.uikit.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\dataTables.uikit.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\jquery.dataTables.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\jquery.dataTables.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\jquery.dataTables_themeroller.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.dataTables_themeroller.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\css\\jquery.dataTables_themeroller.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.dataTables_themeroller.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\dataTables.bootstrap5.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\dataTables.bootstrap5.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\dataTables.bootstrap5.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\dataTables.bootstrap5.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\dataTables.bootstrap5.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\dataTables.bootstrap5.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\dataTables.bootstrap5.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\dataTables.bootstrap5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\images\\sort_asc.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_asc.png"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\images\\sort_asc_disabled.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_asc_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\images\\sort_both.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_both.png"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\images\\sort_desc.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_desc.png"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\images\\sort_desc_disabled.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_desc_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.bootstrap4.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.bootstrap4.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.bootstrap4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.dataTables.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.dataTables.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.foundation.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.foundation.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.foundation.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.foundation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.jqueryui.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.jqueryui.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.jqueryui.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.jqueryui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.material.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.material.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.material.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.material.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.semanticui.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.semanticui.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.semanticui.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.semanticui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.uikit.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.uikit.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\dataTables.uikit.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.uikit.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\jquery.dataTables.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\jquery.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\datatables\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\echarts.min.js",
+      "PackagePath": "staticwebassets\\lib\\echarts\\echarts.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\extension\\bmap.js",
+      "PackagePath": "staticwebassets\\lib\\echarts\\extension\\bmap.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\extension\\bmap.js.map",
+      "PackagePath": "staticwebassets\\lib\\echarts\\extension\\bmap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\extension\\bmap.min.js",
+      "PackagePath": "staticwebassets\\lib\\echarts\\extension\\bmap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\extension\\dataTool.js",
+      "PackagePath": "staticwebassets\\lib\\echarts\\extension\\dataTool.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\extension\\dataTool.js.map",
+      "PackagePath": "staticwebassets\\lib\\echarts\\extension\\dataTool.js.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\echarts\\extension\\dataTool.min.js",
+      "PackagePath": "staticwebassets\\lib\\echarts\\extension\\dataTool.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\fullcalendar\\index.esm.js",
+      "PackagePath": "staticwebassets\\lib\\fullcalendar\\index.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\fullcalendar\\index.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\fullcalendar\\index.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\fullcalendar\\index.global.js",
+      "PackagePath": "staticwebassets\\lib\\fullcalendar\\index.global.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\fullcalendar\\index.global.min.js",
+      "PackagePath": "staticwebassets\\lib\\fullcalendar\\index.global.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\fullcalendar\\index.js",
+      "PackagePath": "staticwebassets\\lib\\fullcalendar\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\fullcalendar\\index.min.js",
+      "PackagePath": "staticwebassets\\lib\\fullcalendar\\index.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\toastr.js\\toastr.css",
+      "PackagePath": "staticwebassets\\lib\\toastr.js\\toastr.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\toastr.js\\toastr.js.map",
+      "PackagePath": "staticwebassets\\lib\\toastr.js\\toastr.js.map"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\toastr.js\\toastr.min.css",
+      "PackagePath": "staticwebassets\\lib\\toastr.js\\toastr.min.css"
+    },
+    {
+      "Id": "C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\wwwroot\\lib\\toastr.js\\toastr.min.js",
+      "PackagePath": "staticwebassets\\lib\\toastr.js\\toastr.min.js"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.IssueTrackingSystem.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.IssueTrackingSystem.props",
+      "PackagePath": "build\\IssueTrackingSystem.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.IssueTrackingSystem.props",
+      "PackagePath": "buildMultiTargeting\\IssueTrackingSystem.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.IssueTrackingSystem.props",
+      "PackagePath": "buildTransitive\\IssueTrackingSystem.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

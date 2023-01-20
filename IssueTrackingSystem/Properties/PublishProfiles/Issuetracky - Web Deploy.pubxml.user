@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG6q9tj4DLk24kf1adW6VIQAAAAACAAAAAAAQZgAAAAEAACAAAABnbtP/RNjL1RAWIenFvwvFzzRmkBXAipuH9Y2Vaj+oJAAAAAAOgAAAAAIAACAAAACjHvKGUEL77Scag23xhQjWAvM2cr2Lq7qNJ4C8V8hhjoAAAACEXLvTpYCfqYM5/Kx+clI6cT8I3PzDO/luQKutIVchLFdpNHqYYK5ChN7cTd7lDNWNOPdCX3gwB0zF3hPQqRJ8p9MB3nis//3wEyRBGK8JHDeLQCrErsN343meuThxGP1YXmbjflVXR5mj2DMyZz1vsdB+UOUnPgOMDPvSjxYnkkAAAABRr/0Lp1qUtmUtKTEzpAwrKyDWmjiQx9+i+wh4EjFSnW9CnktowJa2SshkSFty31yhyHDU0zV0BPivx9UTb1Gy</EncryptedPassword>
+    <History>True|2023-01-20T01:53:40.7505043Z;True|2023-01-19T17:21:26.7089411-08:00;True|2023-01-19T17:04:37.0287141-08:00;True|2023-01-19T16:57:47.9036698-08:00;False|2023-01-19T16:52:26.6645274-08:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DevConnection">
+      <Value>Data Source=issuetracker-server.database.windows.net%3bInitial Catalog=IssueTracker_db%3bUser ID=admin-sql%3bPassword=Chenli26!%3bConnect Timeout=30%3bEncrypt=True%3bTrustServerCertificate=False%3bApplicationIntent=ReadWrite%3bMultiSubnetFailover=False</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="IssueTrackingSystem.Data.ApplicationDbContext">
+      <Value>Data Source=issuetracker-server.database.windows.net%3bInitial Catalog=IssueTracker_db%3bUser ID=admin-sql%3bPassword=Chenli26!%3bConnect Timeout=30%3bEncrypt=True%3bTrustServerCertificate=False%3bApplicationIntent=ReadWrite%3bMultiSubnetFailover=False</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

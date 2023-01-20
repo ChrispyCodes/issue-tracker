@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "datatables@1.10.21",
+      "destination": "wwwroot/lib/datatables/"
+    },
+    {
+      "library": "datatables.net-bs5@1.13.1",
+      "destination": "wwwroot/lib/datatables.net-bs5/"
+    },
+    {
+      "library": "toastr.js@2.1.4",
+      "destination": "wwwroot/lib/toastr.js/"
+    },
+    {
+      "library": "fullcalendar@6.0.3",
+      "destination": "wwwroot/lib/fullcalendar/"
+    }
+  ]
+}

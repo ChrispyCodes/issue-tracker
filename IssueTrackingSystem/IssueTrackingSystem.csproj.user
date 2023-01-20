@@ -11,5 +11,6 @@
     <WebStackScaffolding_DbContextTypeFullName>IssueTrackingSystem.Data.ApplicationDbContext</WebStackScaffolding_DbContextTypeFullName>
     <RazorPage_SelectedScaffolderID>RazorPageScaffolder</RazorPage_SelectedScaffolderID>
     <RazorPage_SelectedScaffolderCategoryPath>root/Common/RazorPage</RazorPage_SelectedScaffolderCategoryPath>
+    <NameOfLastUsedPublishProfile>C:\Users\TheTo\source\IssueTrackingSystem\IssueTrackingSystem\Properties\PublishProfiles\Issuetracky - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

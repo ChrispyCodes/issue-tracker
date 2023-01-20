@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Issuetracky" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\obj\\Release\\net6\.0\\win-x86\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="IssueTrackingSystem.Data.ApplicationDbContext" description="" value="Data Source=issuetracker-server.database.windows.net;Initial Catalog=IssueTracker_db;User ID=admin-sql;Password=Chenli26!;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\TheTo\\source\\IssueTrackingSystem\\IssueTrackingSystem\\obj\\Release\\net6\.0\\win-x86\\PubTmp\\EFSQLScripts\\IssueTrackingSystem\.Data\.ApplicationDbContext\.sql$" />
+  </parameter>
+</parameters>
