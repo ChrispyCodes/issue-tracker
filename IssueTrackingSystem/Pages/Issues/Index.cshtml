@@ -1,4 +1,5 @@
 ﻿@page
+@using IssueTrackingSystem.Models
 @model IssueTrackingSystem.Pages.Issues.IndexModel
 
 @{
@@ -15,119 +16,132 @@
     </nav>
 </div><!-- End Page Title -->
 <!-- ======= Overdue Issues ======= -->
-<div class="card">
+@if (Model.OverdueIssues.Count > 0)
+{
+    <div class="card">
 
-    <div class="card-body">
-        @*div with classes to show card-title and create new link on same line with the link being on right side of card*@
-        <div class="align-middle pb-2">
+        <div class="card-body">
+            @*div with classes to show card-title and create new link on same line with the link being on right side of card*@
+            <div class="align-middle pb-2">
 
-            <h2 class="card-title d-inline-block text-danger">Overdue Issues</h2>
-            <a class="btn btn-outline-primary float-end " asp-page="Create"><i class="bi bi-plus-lg" style="font-weight: bold;"></i> Create New</a>
-        </div>
-        <div class="table-responsive">
-            <table id="overdueIssuesTable" class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Actions</th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Issue[0].Title)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Issue[0].Description)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Issue[0].CreatedById)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Issue[0].CreatedDate)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Issue[0].Project)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Issue[0].AssignedToId)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Issue[0].Status)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Issue[0].Priority)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Issue[0].TargetResolutionDate)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Issue[0].ResolutionDate)
-                        </th>
-                        @*<th>
+                <h2 class="card-title d-inline-block text-danger">Overdue Issues</h2>
+                <a class="btn btn-outline-primary float-end " asp-page="Create"><i class="bi bi-plus-lg" style="font-weight: bold;"></i> Create New</a>
+            </div>
+            <div class="table-responsive">
+                <table id="overdueIssuesTable" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Actions</th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Issue[0].Title)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Issue[0].Description)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Issue[0].CreatedById)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Issue[0].CreatedDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Issue[0].Project)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Issue[0].AssignedToId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Issue[0].Status)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Issue[0].Priority)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Issue[0].TargetResolutionDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Issue[0].ResolutionDate)
+                            </th>
+                            @*<th>
                         @Html.DisplayNameFor(model => model.Issue[0].ModifiedOn)
                         </th>*@
-                        @*<th>
+                            @*<th>
                         @Html.DisplayNameFor(model => model.Issue[0].User)
                         </th>*@
 
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.OverdueIssues)
-                    {
-                        <tr>
-                            <td>
-                                @*create a dropdown list button with edit and delete links and routes*@
-                                <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Actions
-                                    </button>
-                                    <ul class="dropdown-menu shadow animated--grow-in" aria-labelledby="dropdownMenuButton">
-                                        <li><a class="dropdown-item" asp-page="./Edit" asp-route-id="@item.IssueId">Edit</a></li>
-                                        <li><a class="dropdown-item" asp-page="./Details" asp-route-id="@item.IssueId">Details</a></li>
-                                        <li><a class="dropdown-item" asp-page="./Delete" asp-route-id="@item.IssueId">Delete</a></li>
-                                        @*add form button link to call OnPostDeleteAsync method *@
-
-
-                                    </ul>
-                                </div>
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Title)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Description)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.CreatedById)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.CreatedDate)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Project.ProjectName)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.AssignedToId)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Status)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Priority)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.TargetResolutionDate)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ResolutionDate)
-                            </td>
-
-
                         </tr>
-                    }
-                </tbody>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.OverdueIssues)
+                        {
+                            <tr>
+                                <td>
+                                    @*create a dropdown list button with edit and delete links and routes*@
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Actions
+                                        </button>
+                                        <ul class="dropdown-menu shadow animated--grow-in" aria-labelledby="dropdownMenuButton">
+                                            <li><a class="dropdown-item" asp-page="./Edit" asp-route-id="@item.IssueId">Edit</a></li>
+                                            <li><a class="dropdown-item" asp-page="./Details" asp-route-id="@item.IssueId">Details</a></li>
+                                            <li><a class="dropdown-item" asp-page="./Delete" asp-route-id="@item.IssueId">Delete</a></li>
+                                            @*add form button link to call OnPostDeleteAsync method *@
+
+
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Title)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CreatedById)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Project.ProjectName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AssignedToId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Status)
+                                </td>
+                                <td>
+                                    @if (item.Priority == IssuePriority.High)
+                                    {
+                                        <span class="badge bg-danger text-white">@Html.DisplayFor(modelItem => item.Priority)</span>
+                                    }
+                                    else if (item.Priority == IssuePriority.Medium)
+                                    {
+                                        <span class="badge bg-warning">@Html.DisplayFor(modelItem => item.Priority)</span>
+                                    }
+                                    else if (item.Priority == IssuePriority.Low)
+                                    {
+                                        <span class="badge bg-secondary text-white">@Html.DisplayFor(modelItem => item.Priority)</span>
+                                    }
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TargetResolutionDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ResolutionDate)
+                                </td>
+
+
+                            </tr>
+                        }
+                    </tbody>
             </table>
         </div>
     </div>
 </div><!--End Overdue Issues -->
-
+}
 <!-- ======= Assigned Issues ======= -->
 <div class="card">
    
@@ -135,7 +149,7 @@
      @*div with classes to show card-title and create new link on same line with the link being on right side of card*@
      <div class="align-middle pb-2">
 
-            <h2 class="card-title d-inline-block">Assigned Issues: @User.Identity.Name</h2>
+            <h2 class="card-title d-inline-block">Issues: @User.Identity?.Name</h2>
             <a class="btn btn-outline-primary float-end " asp-page="Create"><i class="bi bi-plus-lg" style="font-weight: bold;"></i> Create New</a>
      </div> 
 <div class="table-responsive">
@@ -191,13 +205,10 @@
                             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                  Actions
                             </button>
-                                    <ul class="dropdown-menu shadow animated--grow-in" aria-labelledby="dropdownMenuButton">
+                            <ul class="dropdown-menu shadow animated--grow-in" aria-labelledby="dropdownMenuButton">
                                 <li><a class="dropdown-item" asp-page="./Edit" asp-route-id="@item.IssueId">Edit</a></li>
                                 <li><a class="dropdown-item" asp-page="./Details" asp-route-id="@item.IssueId">Details</a></li>
                                 <li><a class="dropdown-item" asp-page="./Delete" asp-route-id="@item.IssueId">Delete</a></li>
-                                @*add form button link to call OnPostDeleteAsync method *@
-
-
                             </ul>
                         </div>
             </td>
@@ -223,7 +234,18 @@
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Priority)
+                @if (item.Priority == IssuePriority.High)
+                {
+                    <span class="badge bg-danger text-white">@Html.DisplayFor(modelItem => item.Priority)</span>
+                }
+                else if (item.Priority == IssuePriority.Medium)
+                {
+                    <span class="badge bg-warning">@Html.DisplayFor(modelItem => item.Priority)</span>
+                }
+                else if (item.Priority == IssuePriority.Low)
+                {
+                    <span class="badge bg-secondary text-white">@Html.DisplayFor(modelItem => item.Priority)</span>
+                }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TargetResolutionDate)
