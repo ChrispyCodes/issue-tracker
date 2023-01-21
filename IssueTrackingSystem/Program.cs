@@ -11,7 +11,6 @@ var connectionString = builder.Configuration.GetConnectionString("DevConnection"
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.BuildServiceProvider().GetService<ApplicationDbContext>().Database.Migrate();
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 

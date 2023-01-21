@@ -21,35 +21,37 @@
         </ol>
     </nav>
 </div><!-- End Page Title -->
-<div class="card">
-    <div class="card-body">
-        <table class="table table-hover" id="roleTable">
-            <thead>
-                <tr>
-                    <th>
-                        Role
-                    </th>
-                    <th>
-                        Id
-                    </th>
-            
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var role in Model.Role)
-                {
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-hover" id="roleTable">
+                <thead>
                     <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => role.Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => role.Id)
-                        </td>
+                        <th>
+                            Role
+                        </th>
+                        <th>
+                            Id
+                        </th>
+            
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var role in Model.Role)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => role.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => role.Id)
+                            </td>
                 
                    
-                    </tr>
-                }
-            </tbody>
-        </table>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

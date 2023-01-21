@@ -199,7 +199,23 @@
                                                         @Html.DisplayFor(modelItem => item.Project.ProjectName)
                                                     </td>                                              
                                                     <td>
-                                                        @Html.DisplayFor(modelItem => item.Status)
+                                                    if (item.Status == "Open")
+                                                    {
+                                                    <span class="badge badge-danger">@Html.DisplayFor(modelItem => item.Status)</span>
+                                                    }
+                                                    else if (item.Status == "InProgress")
+                                                    {
+                                                        <span class="badge badge-warning">@Html.DisplayFor(modelItem => item.Status)</span>
+                                                    }
+                                                    else if (item.Status == "Resolved")
+                                                    {
+                                                    <span class="badge badge-success">@Html.DisplayFor(modelItem => item.Status)</span>
+                                                    }
+                                                    else
+                                                    {
+                                                    <span class="badge badge-primary">@Html.DisplayFor(modelItem => item.Status)</span>
+                                                    }
+                                                       
                                                     </td>
                                                     <td>
                                                         @Html.DisplayFor(modelItem => item.Priority)
