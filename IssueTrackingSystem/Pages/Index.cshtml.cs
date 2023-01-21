@@ -57,9 +57,9 @@ namespace IssueTrackingSystem.Pages
                 OverdueIssues = await _context.Issues
                    .Include(i => i.Project)
                    .Include(i => i.User)
-                   .Where(i => i.ResolutionDate > i.TargetResolutionDate)
+                   .Where(i => i.ResolutionDate > i.TargetResolutionDate && i.Status != IssueStatus.Closed && i.Status != IssueStatus.Resolved)
                    .ToListAsync();
-
+                
                 //Get count of Issues from each project 
                 OpenIssuesByProject = await _context.Projects.Include(p => p.Issues).Where(p => p.Issues.Count != 0).ToListAsync();
 
