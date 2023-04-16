@@ -10,9 +10,9 @@ This is a simple issue tracking system developed with C# and .NET Core. It allow
 * License
 
 # Features
-* Create new issues
+* Create new issues/projects
 * Assign issues to team members
-* Track issue progress
+* Track issue/project progress
 * Add comments to issues
 * Search issues by keyword, status, or assignee
 * Edit or delete existing issues
