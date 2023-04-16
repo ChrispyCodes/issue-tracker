@@ -39,7 +39,7 @@ To run this project, you will need to have .NET 6 and SQLServer installed on you
 5. Run the IssueTrackingSystem.sln 
 
 # Usage
-Once the application is running, you can access it at http://localhost:8080. From there, you can create new issues, assign them to team members, and track their progress. You can also search for issues by keyword, status, or assignee.
+Once the application is running, you can access it at http://localhost:7880. From there, you can create new issues, assign them to team members, and track their progress. You can also search for issues by keyword, status, or assignee.
 
 # Contributing
 If you would like to contribute to this project, please follow these steps:
