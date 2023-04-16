@@ -1,5 +1,5 @@
 # Issue Tracking System
-This is a simple issue tracking system developed with C# and .NET Core. It allows users to create and manage issues, assign them to team members, and track their progress.
+This is a simple issue tracking system developed with C# and .NET Core. It allows users to create and manage issues and projects, assign them to team members, and track their progress.
 
 # Table of Contents
 * Features
