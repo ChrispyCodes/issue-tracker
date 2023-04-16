@@ -10,7 +10,7 @@
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a asp-page="/Dashboard/Index">Dashboard</a></li>
-            <li class="breadcrumb-item active">Calender</li>
+            <li class="breadcrumb-item active">Calendar</li>
         </ol>
     </nav>
 </div><!-- End Page Title -->
@@ -28,6 +28,9 @@
 
     <script>
 
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            
         var dataObj = [];
         var momentStart = "";
         var momentStartString = "";
@@ -48,7 +51,6 @@
             }
         }  
 
-        document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',

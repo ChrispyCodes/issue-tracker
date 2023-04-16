@@ -18,7 +18,7 @@ a {
 
 body {
     font-family: "Open Sans", sans-serif;
-    /*background: rgb(15, 22, 36);*/
+    background: #f6f9ff;
     color: #444444;
     overflow-x: hidden;
     margin-bottom: 60px;
@@ -45,6 +45,7 @@ h6 {
 td {
     vertical-align: middle;
 }
+
 
 .pagetitle h1 {
     font-size: 24px;

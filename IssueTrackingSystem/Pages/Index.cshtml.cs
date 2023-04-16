@@ -41,7 +41,7 @@ namespace IssueTrackingSystem.Pages
                 var currentUser = await _userManager.GetUserAsync(HttpContext.User);
                 DashboardViewModel = new DashboardViewModel
                 {
-                    OverdueIssues = await _context.Issues.Where(i => i.ResolutionDate > i.TargetResolutionDate).CountAsync(),
+                    OverdueIssues = await _context.Issues.Where(i => i.TargetResolutionDate < DateTime.Today && i.Status != IssueStatus.Closed).CountAsync(),
                     OpenIssues = await _context.Issues.Where(i => i.Status == IssueStatus.Open).CountAsync(),
                     TotalIssues = await _context.Issues.CountAsync(),
                     TotalProjects = await _context.Projects.CountAsync(),
@@ -57,7 +57,7 @@ namespace IssueTrackingSystem.Pages
                 OverdueIssues = await _context.Issues
                    .Include(i => i.Project)
                    .Include(i => i.User)
-                   .Where(i => i.ResolutionDate > i.TargetResolutionDate && i.Status != IssueStatus.Closed && i.Status != IssueStatus.Resolved)
+                   .Where(i => i.TargetResolutionDate < DateTime.Today && i.Status != IssueStatus.Closed)
                    .ToListAsync();
                 
                 //Get count of Issues from each project 
