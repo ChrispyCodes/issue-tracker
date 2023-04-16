@@ -2,12 +2,12 @@
 This is a simple issue tracking system developed with C# and .NET Core. It allows users to create and manage issues and projects, assign them to team members, and track their progress.
 
 # Table of Contents
-* Features
-* Technologies
-* Installation
-* Usage
-* Contributing
-* License
+* [Features](#Features)
+* [Technologies](#Technologies)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Contributing](#Contributing)
+* [License](#License)
 
 # Features
 * Create new issues/projects
